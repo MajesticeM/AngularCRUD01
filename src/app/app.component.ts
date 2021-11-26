@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 //The array that is going to be used
- myArray=[1,2,4,5,7,8,9,0];
+ /*myArray=[1,2,4,5,7,8,9,0];
 
  //Print array
  getArray()
@@ -55,6 +55,59 @@ Delete(ArrayItemNumber:number)
   this.myArray.splice(ArrayItemNumber,1);
   //console.log(this.myArray);
   alert(this.myArray);
+}*/
+list:any[]=[];
+searchlist:any[]=[];
+addElement(item:string)
+{
+  this.list.push({id:this.list.length,name:item});
+  console.log(this.list);
+
+}
+/*searchTask(searchTask:any)
+{
+  this.searchlist.push({id:this.searchlist.length,name:searchTask})
+  console.log(this.searchlist);
+}*/
+showElements()
+{
+  console.log(this.list);
+  alert(this.list);
+}
+
+searchElement(searchItem:any)
+{
+
+  for (let index = 0; index < this.list.length; index++)
+  {
+    const element = this.list[index];
+    //console.log(this.list);
+    if(searchItem===element)
+    {
+      alert(element);
+      //console.log(element);
+      break;
+    }
+    else
+    {
+      //console.log("No such element in the array");
+      alert("No such element in the array");
+      break;
+    }
+  }
+}
+updateElement(elementName:string,index:any)
+{
+  //debugger;
+  this.list[index]=elementName;
+  //this.list.push({id:this.list.length,name:elementName});
+  console.log(elementName);
+  console.log(index);
+}
+removeElement(id:number)
+{
+  console.log(id);
+  this.list=this.list.filter(item=>item.id!==id);
 }
 }
 
