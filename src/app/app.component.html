@@ -5,15 +5,8 @@
 
   <div class="row">
     <div class="col-lg-4">
-      <div class="form-group" style="margin: 10px;">
-        <h3>Search</h3>
-        <input type="text" placeholder="search number" #search class="form-control" />
-        <button  style="margin-top: 10px;" (click)="searchElement(search.id)" class="btn btn-danger">Search</button>
-        <!--<ul *ngFor="let searchtask of list">
-          <li>{{searchtask.name}}</li>
-        </ul>-->
-      </div>
-<hr>
+     
+
       <div style="margin: 10px;">
         <h3>Create</h3>
         <input type="text" placeholder="Enter new element" #element class="form-control"/>
@@ -29,16 +22,26 @@
         </ul>
       </div>-->
       <hr>
+      
       <div style="margin: 10px;">
         <h3>Update</h3>
         <div class="form-group">
           <label>Enter The element that you want to change</label>
           <input type="number" class="form-control" #numberToChange placeholder="Insert Array ID"/>
           <input type="text" class="form-control" #changeElement placeholder="Update Element"/>
-          <button style="margin-top: 10px;" (click)="updateElement(changeElement.value,numberToChange.value)" class="btn btn-primary">Make change</button>
+          <button style="margin-top: 10px;" (click)="updateElement(changeElement.value,numberToChange.id)" class="btn btn-primary">Make change</button>
         </div>
       </div>
-
+      <hr>
+      <div class="form-group" style="margin: 10px;">
+        <h3>Search</h3>
+        <input type="text" placeholder="search element" #search class="form-control" />
+        <button  style="margin-top: 10px;" (click)="searchElement(search.name)" class="btn btn-danger">Search</button>
+        <!--<ul *ngFor="let searchtask of list">
+          <li>{{searchtask.name}}</li>
+        </ul>-->
+      </div>
+   
 
 
 
